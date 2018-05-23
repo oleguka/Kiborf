@@ -18,20 +18,20 @@ public class MainActivity extends AppCompatActivity {
     public void showDialog(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
-        builder.setTitle("Title")
-                .setMessage("Message")
+        builder.setTitle("Угроза")
+                .setMessage("Уничтожить все живое?")
                 .setCancelable(true)
                 .setIcon(R.drawable.ic_radio)
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Пощадить", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), "You select Cancel ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Вы добрый человек", Toast.LENGTH_SHORT).show();
                     }
                 })
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Изничтожить", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), "You select Yes", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Вы все уничтожили", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setOnCancelListener(new DialogInterface.OnCancelListener() {
